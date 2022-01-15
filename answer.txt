@@ -1,0 +1,11 @@
+1. 
+Why does this assignment ask you to create a function for messages but an action for sending the SMS message?
+What's the difference? 
+The difference between a function and an action is whether it will cause side-effect or change the state. 
+In this lab, we use defaction(action) when we send the message in the module. We can interpret that it essentaily changes the states for the database that stores the message.
+However, when we get a list of message, we didn't change any states and that's why we use function.
+
+2. 
+Why did we introduce the secrets for the Twilio module by configuring the rule that uses the module, rather than configuring the module directly?
+Because we don't want the possibilty of leaking the credentials. We don't want the credentails to be stored on Github or any repositories. 
+It is always a bad practice to hard-code the credentails.
